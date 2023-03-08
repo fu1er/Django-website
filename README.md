@@ -8,6 +8,9 @@
 
 ```bash
 pip install -r requirements.txt
+cd ./videopage
+wget https://cloud.tsinghua.edu.cn/f/d3167d4790784661b6cd/?dl=1 -O static.zip
+unzip static.zip && cd ..
 python3 manage.py migrate
 python3 manage.py runserver
 ```
