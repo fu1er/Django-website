@@ -2,7 +2,7 @@
 
 ## 访问网站
 
-浏览器中输入`http://101.43.196.108:8000/videopage/`
+[点击访问](http://101.43.196.108:8000/videopage/)
 
 ## 运行
 
@@ -11,6 +11,7 @@ pip install -r requirements.txt
 python3 manage.py migrate
 python3 manage.py runserver
 ```
+---
 * ### 项目设计
 
   1. 系统功能以及实现方法

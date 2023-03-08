@@ -124,3 +124,5 @@ Not Found: /favicon.ico
 [08/Mar/2023 16:33:31] "GET /videopage/authors/3/ HTTP/1.1" 200 2697
 [08/Mar/2023 16:34:03] "GET /videopage/20/ HTTP/1.1" 200 5696
 [08/Mar/2023 16:37:19] "GET /videopage/7/ HTTP/1.1" 200 3090
+[08/Mar/2023 16:40:02] "GET /videopage/authors/3/ HTTP/1.1" 200 2697
+[08/Mar/2023 16:40:54] "GET /videopage/ HTTP/1.1" 200 25802
