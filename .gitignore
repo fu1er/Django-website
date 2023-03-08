@@ -1,1 +1,3 @@
 /videopage/static
+/venv
+db.sqlite3
