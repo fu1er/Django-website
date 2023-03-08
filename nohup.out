@@ -1,0 +1,126 @@
+Watching for file changes with StatReloader
+[08/Mar/2023 16:20:07] "GET /static/videopage/source/upface_img_music/1285.jpg HTTP/1.1" 200 1148
+[08/Mar/2023 16:20:07] "GET /static/videopage/source/upface_img_music/1285.jpg HTTP/1.1" 200 1148
+[08/Mar/2023 16:20:25] "GET /videopage/2/ HTTP/1.1" 200 4013
+[08/Mar/2023 16:20:28] "GET /videopage/search/result/?md=video&info=%E6%B4%BB%E5%8B%95%E4%BD%9C%E5%93%81 HTTP/1.1" 200 2053
+/home/ubuntu/code/git/Django-website/videopage/views.py:13: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'videopage.models.Videoinfo'> QuerySet.
+  paginator = Paginator(videos, 40)
+[08/Mar/2023 16:20:29] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:20:30] "GET /videopage/4/ HTTP/1.1" 200 3972
+[08/Mar/2023 16:20:31] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:20:32] "GET /videopage/23/ HTTP/1.1" 200 4709
+[08/Mar/2023 16:21:44] "GET /videopage/authors/11/ HTTP/1.1" 200 2684
+[08/Mar/2023 16:22:01] "GET /videopage/authors/12/ HTTP/1.1" 200 2953
+[08/Mar/2023 16:22:01] "GET /static/videopage/source/surface_img_music/504.jpg HTTP/1.1" 200 81795
+[08/Mar/2023 16:22:02] "GET /static/videopage/source/surface_img_music/504.jpg HTTP/1.1" 200 81795
+[08/Mar/2023 16:22:47] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:22:48] "GET /videopage/20/ HTTP/1.1" 200 5696
+Not Found: /favicon.ico
+[08/Mar/2023 16:23:02] "GET /favicon.ico HTTP/1.1" 404 2228
+[08/Mar/2023 16:23:04] "GET /videopage/authors/18/ HTTP/1.1" 200 3643
+[08/Mar/2023 16:23:04] "GET /static/videopage/source/surface_img_music/215.jpg HTTP/1.1" 200 73773
+[08/Mar/2023 16:23:04] "GET /static/videopage/source/surface_img_music/234.jpg HTTP/1.1" 200 104436
+[08/Mar/2023 16:23:04] "GET /static/videopage/source/surface_img_music/304.jpg HTTP/1.1" 200 111173
+/home/ubuntu/code/git/Django-website/videopage/views.py:43: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'videopage.models.Author'> QuerySet.
+  paginator = Paginator(authors, 40)
+[08/Mar/2023 16:23:11] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:23:12] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:23:17] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:23:21] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:23:22] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:23:23] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:23:24] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:23:25] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:23:56] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:23:57] "GET /videopage/5028/ HTTP/1.1" 200 3155
+[08/Mar/2023 16:23:57] "GET /static/videopage/source/upface_img_game/841.jpg HTTP/1.1" 200 3095
+[08/Mar/2023 16:23:57] "GET /static/videopage/source/surface_img_game/841.jpg HTTP/1.1" 200 189298
+[08/Mar/2023 16:23:57] "GET /static/videopage/source/upface_img_game/841.jpg HTTP/1.1" 200 3095
+[08/Mar/2023 16:23:57] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:23:59] "GET /static/videopage/source/surface_img_game/841.jpg HTTP/1.1" 200 189298
+[08/Mar/2023 16:24:00] "GET /videopage/1/ HTTP/1.1" 200 3926
+[08/Mar/2023 16:24:23] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:24:38] "GET /videopage/1/ HTTP/1.1" 200 3926
+Not Found: /favicon.ico
+[08/Mar/2023 16:24:43] "GET /favicon.ico HTTP/1.1" 404 2228
+[08/Mar/2023 16:24:48] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:24:54] "GET /videopage/search/ HTTP/1.1" 200 2812
+[08/Mar/2023 16:25:03] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:25:08] "GET /videopage/1/ HTTP/1.1" 200 3926
+Not Found: /favicon.ico
+[08/Mar/2023 16:25:12] "GET /favicon.ico HTTP/1.1" 404 2228
+[08/Mar/2023 16:25:19] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03||'\x8fBm\x9dlö·¡\x83\x17|v*â")
+[08/Mar/2023 16:25:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[08/Mar/2023 16:25:19] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+[08/Mar/2023 16:25:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[08/Mar/2023 16:25:22] "GET /videopage/authors/1/ HTTP/1.1" 200 2529
+[08/Mar/2023 16:25:26] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:25:28] "GET /videopage/search/ HTTP/1.1" 200 2812
+[08/Mar/2023 16:25:28] "GET /videopage/authors/18/ HTTP/1.1" 200 3643
+[08/Mar/2023 16:25:28] "GET /static/videopage/source/surface_img_music/215.jpg HTTP/1.1" 200 73773
+[08/Mar/2023 16:25:28] "GET /static/videopage/source/upface_img_music/20.jpg HTTP/1.1" 200 3176
+[08/Mar/2023 16:25:28] "GET /static/videopage/source/surface_img_music/304.jpg HTTP/1.1" 200 111173
+[08/Mar/2023 16:25:28] "GET /static/videopage/source/surface_img_music/234.jpg HTTP/1.1" 200 104436
+[08/Mar/2023 16:25:28] "GET /static/videopage/source/upface_img_music/20.jpg HTTP/1.1" 200 3176
+[08/Mar/2023 16:25:28] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:25:29] "GET /static/videopage/source/surface_img_music/234.jpg HTTP/1.1" 200 104436
+[08/Mar/2023 16:25:30] "GET /static/videopage/source/surface_img_music/215.jpg HTTP/1.1" 200 73773
+[08/Mar/2023 16:25:30] "GET /static/videopage/source/surface_img_music/304.jpg HTTP/1.1" 200 111173
+[08/Mar/2023 16:25:36] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:25:37] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:25:53] "GET /videopage/4/ HTTP/1.1" 200 3972
+[08/Mar/2023 16:27:29] "GET /videopage/ HTTP/1.1" 200 25802
+Not Found: /favicon.ico
+[08/Mar/2023 16:27:29] "GET /favicon.ico HTTP/1.1" 404 2228
+[08/Mar/2023 16:28:06] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:28:06] "GET /static/videopage/source/surface_img_music/6.jpg HTTP/1.1" 200 42214
+[08/Mar/2023 16:28:06] "GET /static/videopage/source/surface_img_music/2.jpg HTTP/1.1" 200 91544
+[08/Mar/2023 16:28:06] "GET /static/videopage/source/surface_img_music/1.jpg HTTP/1.1" 200 323494
+[08/Mar/2023 16:28:06] "GET /static/videopage/source/surface_img_music/3.jpg HTTP/1.1" 200 90975
+[08/Mar/2023 16:28:06] "GET /static/videopage/source/surface_img_music/5.jpg HTTP/1.1" 200 428699
+[08/Mar/2023 16:28:07] "GET /static/videopage/source/surface_img_music/4.jpg HTTP/1.1" 200 147167
+[08/Mar/2023 16:28:08] "GET /static/videopage/source/surface_img_music/9.jpg HTTP/1.1" 200 130140
+[08/Mar/2023 16:28:08] "GET /static/videopage/source/surface_img_music/10.jpg HTTP/1.1" 200 165683
+[08/Mar/2023 16:28:08] "GET /static/videopage/source/surface_img_music/13.jpg HTTP/1.1" 200 30402
+[08/Mar/2023 16:28:08] "GET /static/videopage/source/surface_img_music/14.jpg HTTP/1.1" 200 124815
+[08/Mar/2023 16:28:09] "GET /static/videopage/source/surface_img_music/15.jpg HTTP/1.1" 200 57915
+[08/Mar/2023 16:28:09] "GET /static/videopage/source/surface_img_music/16.jpg HTTP/1.1" 200 184055
+[08/Mar/2023 16:28:09] "GET /static/videopage/source/surface_img_music/11.jpg HTTP/1.1" 200 107377
+[08/Mar/2023 16:28:10] "GET /static/videopage/source/surface_img_music/17.jpg HTTP/1.1" 200 483877
+[08/Mar/2023 16:28:11] "GET /static/videopage/source/surface_img_music/20.jpg HTTP/1.1" 200 127359
+[08/Mar/2023 16:28:11] "GET /static/videopage/source/surface_img_music/12.jpg HTTP/1.1" 200 183154
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/21.jpg HTTP/1.1" 200 55033
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/22.jpg HTTP/1.1" 200 108676
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/23.jpg HTTP/1.1" 200 34818
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/24.jpg HTTP/1.1" 200 48905
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/25.jpg HTTP/1.1" 200 25686
+[08/Mar/2023 16:28:12] "GET /static/videopage/source/surface_img_music/26.jpg HTTP/1.1" 200 52089
+[08/Mar/2023 16:28:13] "GET /static/videopage/source/surface_img_music/27.jpg HTTP/1.1" 200 319205
+[08/Mar/2023 16:28:14] "GET /static/videopage/source/surface_img_music/29.jpg HTTP/1.1" 200 191888
+[08/Mar/2023 16:28:14] "GET /static/videopage/source/surface_img_music/28.jpg HTTP/1.1" 200 101812
+[08/Mar/2023 16:28:15] "GET /static/videopage/source/surface_img_music/30.jpg HTTP/1.1" 200 186043
+[08/Mar/2023 16:28:15] "GET /static/videopage/source/surface_img_music/31.jpg HTTP/1.1" 200 114227
+[08/Mar/2023 16:28:15] "GET /static/videopage/source/surface_img_music/33.jpg HTTP/1.1" 200 343190
+[08/Mar/2023 16:28:16] "GET /static/videopage/source/surface_img_music/34.jpg HTTP/1.1" 200 72309
+[08/Mar/2023 16:28:16] "GET /static/videopage/source/surface_img_music/35.jpg HTTP/1.1" 200 77609
+[08/Mar/2023 16:28:17] "GET /static/videopage/source/surface_img_music/36.jpg HTTP/1.1" 200 82242
+[08/Mar/2023 16:28:18] "GET /static/videopage/source/surface_img_music/37.jpg HTTP/1.1" 200 634596
+[08/Mar/2023 16:28:18] "GET /static/videopage/source/surface_img_music/32.jpg HTTP/1.1" 200 151116
+[08/Mar/2023 16:28:19] "GET /static/videopage/source/surface_img_music/38.jpg HTTP/1.1" 200 113057
+[08/Mar/2023 16:28:19] "GET /static/videopage/source/surface_img_music/39.jpg HTTP/1.1" 200 102528
+[08/Mar/2023 16:28:19] "GET /static/videopage/source/surface_img_music/40.jpg HTTP/1.1" 200 205902
+[08/Mar/2023 16:28:21] "GET /static/videopage/source/surface_img_music/7.jpg HTTP/1.1" 200 453532
+[08/Mar/2023 16:28:37,819] - Broken pipe from ('183.172.212.225', 51323)
+[08/Mar/2023 16:28:37,820] - Broken pipe from ('183.172.212.225', 51321)
+[08/Mar/2023 16:29:55] "GET /videopage/2/ HTTP/1.1" 200 4013
+[08/Mar/2023 16:33:22] "GET /videopage/ HTTP/1.1" 200 25802
+Not Found: /favicon.ico
+[08/Mar/2023 16:33:23] "GET /favicon.ico HTTP/1.1" 404 2228
+[08/Mar/2023 16:33:24] "GET /videopage/7/ HTTP/1.1" 200 3090
+[08/Mar/2023 16:33:28] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:33:29] "GET /videopage/11/ HTTP/1.1" 200 3115
+[08/Mar/2023 16:33:30] "GET /videopage/ HTTP/1.1" 200 25802
+[08/Mar/2023 16:33:31] "GET /videopage/authors/ HTTP/1.1" 200 19720
+[08/Mar/2023 16:33:31] "GET /videopage/authors/3/ HTTP/1.1" 200 2697
+[08/Mar/2023 16:34:03] "GET /videopage/20/ HTTP/1.1" 200 5696
+[08/Mar/2023 16:37:19] "GET /videopage/7/ HTTP/1.1" 200 3090
