@@ -23,7 +23,7 @@ python3 manage.py runserver
 
      * 爬虫
 
-       爬虫部分爬取的是 Bilibili 若干分区八月份的热门视频。因为该网站的网页都是动态网页，为此使用了 selenium 库来模拟浏览器的访问以动态获取到当前页面的源码。在使用该模块之前，爬虫项目使用的是 python 自带的 reques 去请求网页源码，但是请求到的源码没有包含需要的信息，后来使用了 selenium 库才成功解决这个问题。
+       爬虫部分爬取的是 Bilibili 若干分区八月份的热门视频。因为该网站的网页都是动态网页，为此使用了 selenium 库来模拟浏览器的访问以动态获取到当前页面的源码。在使用该模块之前，爬虫项目使用的是 python 自带的 request 去请求网页源码，但是请求到的源码没有包含需要的信息，后来使用了 selenium 库才成功解决这个问题。
 
        ```python
        from selenium import webdriver
@@ -41,9 +41,7 @@ python3 manage.py runserver
        ```python
        while dat_total < dat_need:
            page = browser.page_source
-           # 用BS解析网页源码
            BS_page = BeautifulSoup(page, 'html.parser')
-           # 匹配资源
            AREA = BS_page.find('div', class_='l-con')
            area = AREA.find('div', class_="vd-list-cnt")
            videolst = area.find_all('div', class_="r")
@@ -63,7 +61,7 @@ python3 manage.py runserver
            time.sleep(1)
        ```
 
-       接下来就是爬取数据的部分了，首先是输入 URL ，为需要爬取的视频分区的网址，然后是 所需要的数据量和当前已经爬取的数据量，以及当前网页的分页数。用两个变量分别存储已经爬取的数据总量和需要爬取的数据量，在数据不够时进行循环。
+       接下来就是爬取数据的部分了，首先是输入 URL ，为需要爬取的视频分区的网址，然后是所需要的数据量和当前已经爬取的数据量，以及当前网页的分页数。用两个变量分别存储已经爬取的数据总量和需要爬取的数据量，在数据不够时进行循环。
 
        接下来用 selenium 库里的函数获取当前浏览器页面的源码，这样成功得到了包含所需信息的网页源码。之后应用 bs4 库里的 BeautifSoup 对得到的源码进行解析，根据分区网页的 HTML 代码的标签定位到网页中视频排行榜里所有的视频的URL，并对其进行格式化。
 
