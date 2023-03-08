@@ -7,7 +7,7 @@ urlpatterns = [
     path('', views.mainpage, name='main'),
     path('authors/', views.authorpage, name='authors'),
     path('search/', views.searchpage, name='search'),
-    path('<int:video_id>/', views.videodetials, name='detials'),
-    path('authors/<int:author_id>/', views.authordetials, name='adetials'),
+    path('<int:video_id>/', views.videodetails, name='details'),
+    path('authors/<int:author_id>/', views.authordetails, name='adetails'),
     path('search/result/', views.search_result, name='result'),
 ]

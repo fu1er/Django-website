@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{video.id}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../static/style/videodetails.css">
+</head>
+
+<body>
+  {% load static %}
+  <div class="header">
+    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
+  </div>
+  <div class="topnav">
+    <a href="../">返回</a>
+  </div>
+
+  <div class="row" style="margin-right: auto;margin-left: auto;">
+
+
+    <div class="column middle">
+      <h2>{{video.video_name}}</h2>
+      <p>{{video.video_view}}&nbsp;&nbsp;{{video.publish_date}}</p>
+      <hr />
+      <a href="{{video.url}}">
+        <img src="{% static video.cover %}" alt="{{video.name}}" width=600px height=400px, style="margin-left: 90px;">
+      </a>
+      <hr />
+      <div style="text-align: center;">
+        <span style="padding: 40px;">点赞数{{video.likes}}</span>
+        <span style="padding: 40px;">投币数{{video.coins}}</span>
+        <span style="padding: 40px;">收藏数{{video.collects}}</span>
+      </div>
+      <hr />
+      <div>
+        <p>简介：{{video.brief}}</p>
+      </div>
+    </div>
+
+    <div class="column side">
+      <div class="upinfo" , style="background-color: rebeccapurple">
+        <a href="{% url 'videopage:adetails' video.author.id %}" style="text-decoration:none;">
+          <img src="{% static video.author.photo %}" width=100px height=100px style="vertical-align: top;">
+          <span style="color: #ddd; font-size: x-large;">{{video.author.name}}</span>
+        </a>
+      </div>
+      <h2>评论</h2>
+      <hr />
+      {% for com in com_list %}
+      <p>{{com}}</p>
+      <hr />
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="footer">
+    <p></p>
+
+  </div>
+
+</body>
+
+</html>

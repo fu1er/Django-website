@@ -27,12 +27,12 @@ def mainpage(request):
     }
     return render(request, 'videopage/mainpage.html', context)
 
-def videodetials(request, video_id):
+def videodetails(request, video_id):
     video = Videoinfo.objects.select_related('author').filter(id=video_id).first()
     video.brief = video.brief[2:len(video.brief)-2]
     com_list = video.comment[2:len(video.comment)-2].split("', '")
     if video:
-        return render(request, 'videopage/videodetials.html', {'video': video, 'com_list': com_list})
+        return render(request, 'videopage/videodetails.html', {'video': video, 'com_list': com_list})
     else:
         return Http404('视频不存在哦')
 
@@ -57,11 +57,11 @@ def authorpage(request):
     }
     return render(request, 'videopage/authorspage.html', context)
 
-def authordetials(request, author_id):
+def authordetails(request, author_id):
     author = Author.objects.filter(id=author_id).first()
     author.describe = author.describe[2:len(author.describe)-2]
     if author:
-        return render(request, 'videopage/authordetials.html', {'author':author})
+        return render(request, 'videopage/authordetails.html', {'author':author})
     else:
         return Http404('作者不存在哦')
 

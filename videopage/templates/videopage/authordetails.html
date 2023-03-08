@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{author.id}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../static/style/authordetails.css">
+</head>
+
+<body>
+  {% load static %}
+  <div class="header">
+    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
+  </div>
+  <div class="topnav">
+    <a href="../">返回</a>
+  </div>
+
+  <div class="row">
+    <div class="column middle">
+      <div>
+        <img src="{% static author.photo %}" width=100px height=100px style="vertical-align: top;">
+        <span style="color: rebeccapurple; font-size: x-large;">{{author.name}}</span>
+        <hr />
+        <p>关注：{{author.followers}}</p>
+        <p>简介：{{author.describe}}</p>
+      </div>
+      <hr />
+      {% for video in author.videoinfo_set.all%}
+      <div>
+        <a href="{% url 'videopage:details' video.id %}" style="text-decoration:none;">
+          <img src="{% static video.cover %}" alt="{{author.name}}" width=270px height=180px
+            style="vertical-align: top;">
+          <span style="font-size: x-large; color: black;">{{video.video_name}}</span>
+        </a>
+      </div>
+      <hr />
+      {% endfor %}
+      <hr />
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
