@@ -89,12 +89,6 @@ python3 manage.py runserver
 
        函数开启新的浏览器，并向传入的 URL 发送 get 请求，请求到视频详情页的内容。在这里让程序等待了 3s 才进行下一步操作，是因为由于网速不足可能导致页面渲染慢，影响后续的操作。经过等待基本上网页已经加载好了，又因为BIlibili的评论区是动态加载的，只有下滑到评论区才会动态去请求评论区的内容。所以在这里程序模拟了一个下拉滚动条到评论区的操作，然后等待 2s 让评论充分加载。后面就是获取源码，用bf4解析源码，写入文件的操作了。
 
-       ![image-20210910184911204](/Users/fu1er/Library/Application Support/typora-user-images/image-20210910184911204.png)
-
-       ![image-20210910184930263](/Users/fu1er/Library/Application Support/typora-user-images/image-20210910184930263.png)
-
-       ![image-20210910185023052](/Users/fu1er/Library/Application Support/typora-user-images/image-20210910185023052.png)
-
        数据和图片按照分区储存方便查看，程序最终爬取了共5106个视频对应的信息。
 
      * 网站
@@ -147,8 +141,6 @@ python3 manage.py runserver
        这样的查询效率还不错。
 
        网页的顶端是一个导航栏，点击相应按钮可以跳转到对应的页面：
-
-       ![image-20210910232133752](/Users/fu1er/Library/Application Support/typora-user-images/image-20210910232133752.png)
 
        搜索页面在没有匹配的结果时也会返回对应的信息提示没有结果。
 
@@ -226,8 +218,6 @@ python3 manage.py runserver
 
      这里先对时间进行了一个简单的分段，因为对于时间来说分析较长一段时间的效果更好。
 
-     <img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210910235340943.png" alt="image-20210910235340943" style="zoom:33%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210910235431584.png" alt="image-20210910235431584" style="zoom:33%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210910235552812.png" alt="image-20210910235552812" style="zoom:33%;" />
-
      可以看到，知识区、舞蹈区、游戏区的热门视频的发布时间是有差异的。其中舞蹈区的视频在0～6点这个时间段的比例明显大于其他两个分区，这有可能是由于观众群体不同造成的。另外，发布视频最集中的时间段是下午及晚上，因为这两个时间段活跃用户更多。
 
   3. 结论2:白嫖的人很多，但是舞蹈区的观众白嫖率【更低】。
@@ -241,8 +231,6 @@ python3 manage.py runserver
      plt.ylabel("views")
      plt.show()
      ```
-
-     <img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911000607500.png" alt="image-20210911000607500" style="zoom:25%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911000720120.png" alt="image-20210911000720120" style="zoom:25%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911000811858.png" alt="image-20210911000811858" style="zoom:25%;" />
 
      由于游戏区八月份热门视频出现了一个两千多万播放量的现象级作品，导致散点图左下角过于密集，考虑到该点基本处于对角线上，先剔除该数据，即对数据进行一个切片后再生成图片，这样三个分区的播放量基本保持在同一量级上。：
 
@@ -259,10 +247,6 @@ python3 manage.py runserver
          else:
              likes.append(float(like))
      ```
-
-     ![image-20210911001153449](/Users/fu1er/Library/Application Support/typora-user-images/image-20210911001153449.png)
-
-     
 
      横向比较，首先，三个分区的播放量和点赞数基本成正比，这是符合预期的，但是知识区和游戏区的观众明显更爱白嫖。在图的左侧出现了很多点，说明很多观众看完视频却连一个免费的赞都不愿意点。再看舞蹈区的散点图，左侧的点明显少于另外两个区，由此可见舞蹈区的观众白嫖率更低。
 
@@ -294,8 +278,6 @@ python3 manage.py runserver
      ```
 
      time_list 储存每个小时发布的视频总数， view_list 储存每个小时发布的视频的总播放量的和，最后求平均然后绘制图像：
-
-     <img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911002355683.png" alt="image-20210911002355683" style="zoom:25%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911002436856.png" alt="image-20210911002436856" style="zoom:25%;" /><img src="/Users/fu1er/Library/Application Support/typora-user-images/image-20210911002521282.png" alt="image-20210911002521282" style="zoom:25%;" />
 
      可以明显地看出无论是哪个分区，图像上都有两个峰值，对应的时间段是人们的休息时间，大家显然更多是在休息时间选择用看视频的方式打发时间。
 
