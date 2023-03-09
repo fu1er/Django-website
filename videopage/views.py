@@ -36,6 +36,15 @@ def videodetails(request, video_id):
     else:
         return Http404('视频不存在哦')
 
+def videodetailsfromauthor(request, author_id, video_id):
+    video = Videoinfo.objects.select_related('author').filter(id=video_id).first()
+    video.brief = video.brief[2:len(video.brief)-2]
+    com_list = video.comment[2:len(video.comment)-2].split("', '")
+    if video:
+        return render(request, 'videopage/videodetails.html', {'video': video, 'com_list': com_list})
+    else:
+        return Http404('视频不存在哦')
+
 def authorpage(request):
     authors = Author.objects.only(
         'name', 'photo'

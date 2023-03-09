@@ -18,8 +18,8 @@
 
     <div class="topnav">
       <a href="#" class="select">视频</a>
-      <a href="authors/">作者</a>
-      <a href="search/">搜索</a>
+      <a href="../authors/">作者</a>
+      <a href="../search/">搜索</a>
     </div>
 
     {% load static %} {% if page_obj %}
@@ -27,7 +27,7 @@
       <ul class="videolist">
         {% for video in page_obj %}
         <li class="video">
-          <a href="{% url 'videopage:details' video.id %}" class="videolink">
+          <a href="{% url 'videopage:hvideo' video.id %}" class="videolink">
             <img
               src="{% static video.cover %}"
               alt="{{video.video_name}}"

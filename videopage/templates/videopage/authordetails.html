@@ -35,7 +35,7 @@
       {% for video in author.videoinfo_set.all%}
       <div class="videobox">
         <a
-          href="{% url 'videopage:details' video.id %}"
+          href="{% url 'videopage:avideo' author.id video.id %}"
           style="text-decoration: none"
         >
           <img
