@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Welcome!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/style/authorspage.css"
+    />
+  </head>
 
-<head>
-  <title>Welcome!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../../static/style/authorspage.css">
-</head>
-
-<body>
-
-  <div class="header">
-    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
-  </div>
-
-  <div class="topnav">
-    <a href="../">视频</a>
-    <a href="#" style="background-color: lightgray; color: rebeccapurple;">作者</a>
-    <a href="../search/">搜索</a>
-  </div>
-
-  {% load static %}
-  {% if page_obj %}
-  <main>
-    <div style="width: 1320px; margin-right:auto;margin-left:auto; padding: auto;">
-      <ul class="row" style="list-style-type: none;">
-        {% for author in page_obj %}
-        <a href="{% url 'videopage:adetails' author.id %}" class='authorlink'>
-          <li class="authorcolumn" style="border-style: ridge; border-radius: 20px; margin: 5px; border-color: #ddd;">
-            <img src="{% static author.photo %}" alt="{{author.name}}" width=100px height=100px>
-            <span style="width:100px; height:100px;">{{author.name}}</span>
-          </li>
-        </a>
-
-        {% endfor %}
-      </ul>
+  <body>
+    <div class="header">
+      <h1 class="title">CiliCili</h1>
     </div>
-  </main>
-  {% endif %}
 
-  {% if is_paginated %}
-  <div style="text-align: center;">
+    <div class="topnav">
+      <a href="../">视频</a>
+      <a href="#" class="select">作者</a>
+      <a href="../search/">搜索</a>
+    </div>
 
-    <div class="pagination">
+    {% load static %} {% if page_obj %}
+    <main>
+      <div class="authorlist">
+        <ul class="row" style="list-style-type: none">
+          {% for author in page_obj %}
+          <li class="author">
+            <a
+              href="{% url 'videopage:adetails' author.id %}"
+              class="authorlink"
+            >
+              <img
+                src="{% static author.photo %}"
+                alt="{{author.name}}"
+                class="authorimage"
+              />
+              <!-- <span class="authorname"> -->
+                {{author.name}}
+              <!-- </span> -->
+            </a>
+          </li>
+          {% endfor %}
+          <!-- 自适应高度 -->
+          <div style="clear: both"></div>
+        </ul>
+      </div>
+    </main>
+    {% endif %} {% if is_paginated %}
+    <div class="box">
       <div class="pagination">
-        <span style="font-size:small; float: left; padding: 7px;">共{{paginator.count}}条数据</span>
+        <span style="font-size: small; float: left; padding: 7px"
+          >共{{paginator.count}}条数据</span
+        >
         {% if page_obj.has_previous %}
         <a href="?page={{ page_obj.previous_page_number }}">«</a>
         {% else %}
         <span></span>
-        {% endif %}
-
-        {% for i in page_range %}
-        {% if page_obj.number == i %}
+        {% endif %} {% for i in page_range %} {% if page_obj.number == i %}
         <a class="active">{{i}}</a>
         {% elif i == '…' %}
         <a>{{i}}</a>
         {% else %}
         <a href="?page={{i}}">{{i}}</a>
-        {% endif %}
-        {% endfor %}
-
-        {% if page_obj.has_next %}
+        {% endif %} {% endfor %} {% if page_obj.has_next %}
         <a href="?page={{page_obj.next_page_number}}">»</a>
         {% else %}
         <span></span>
         {% endif %}
         <div class="pagination">
-          <form style="padding: 5px;">
-            跳至<input type="text" name="page" size="5">页
+          <form style="padding: 5px">
+            跳至<input class="search" type="text" name="page" size="1" />页
           </form>
         </div>
-
       </div>
     </div>
-
-
-  </div>
-  {% endif %}
-  <div style="margin: 300px;"></div>
-</body>
-
+    {% endif %}
+  </body>
 </html>
