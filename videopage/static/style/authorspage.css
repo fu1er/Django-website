@@ -52,9 +52,9 @@ li.author {
     height: 100px;
     padding: 15px;
     border-style: ridge;
-    border-radius: 20px;
+    border-radius: 5px;
+    border-color: #ffffff;
     margin: 5px;
-    border-color: #ddd;
 }
 
 img.authorimage {

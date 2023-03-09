@@ -28,7 +28,7 @@
     <div style="width: 1320px; margin-right:auto;margin-left:auto ">
       <ul class="row" style="list-style-type: none;">
         {% for video in page_obj %}
-        <a href="{% url 'videopage:detials' video.id %}" class='videolink'>
+        <a href="{% url 'videopage:details' video.id %}" class='videolink'>
           <li class="column" style="border-style: ridge; border-radius: 20px; margin: 5px; border-color: #ddd;">
             <img src="{% static video.cover %}" alt="{{video.video_name}}" width=270px height=180px
               style="margin: 2px;">

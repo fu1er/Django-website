@@ -12,29 +12,31 @@
 <body>
 
   <div class="header">
-    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
+    <h1 class="title">CiliCili</h1>
   </div>
 
   <div class="topnav">
     <a href="../">视频</a>
     <a href="../authors/">作者</a>
-    <a href="#" style="background-color: lightgray; color: rebeccapurple;">搜索</a>
+    <a href="#" class="select">搜索</a>
   </div>
 
   {% load static %}
   {% csrf_token %}
   <main>
+    <span class="space"> </span>
     <div class="search">
-      <form action="{% url 'videopage:result' %}" style="width:800px">
-        <select name="md" style="float: left;">
-          <option value="video" style="color: rebeccapurple;">video</option>
-          <option value="author" style="color: rebeccapurple;">author</option>
+      <form action="{% url 'videopage:result' %}">
+        <select class="left" name="md">
+          <option value="video">视频</option>
+          <option value="author">作者</option>
         </select>
-        <input type="text" name="info" size="50" style="margin-left:5px; margin-right: 5px;">
-        <input type="submit" value="搜索"
-          style="background-color:rebeccapurple ; color: #ddd; margin-left: 5px; font-size: medium; padding: 10px;">
+        <input class="keys" type="text" name="info" size="50">
+        <input class="button" type="submit" value="搜索">
       </form>
+      <div style="clear: both"></div>
     </div>
+    <span class="space"> </span>
   </main>
   <div style="margin: 300px;"></div>
 </body>

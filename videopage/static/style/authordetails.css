@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
 }
@@ -10,6 +6,11 @@ body {
 .header {
     background-color: #f1f1f1;
     padding: 20px;
+}
+
+.title {
+    font-family: cursive;
+    color: rebeccapurple;
 }
 
 /* 设置顶部导航栏的样式 */
@@ -34,37 +35,34 @@ body {
     color: rebeccapurple;
 }
 
-
-/* 创建并排的三个非等列 */
-.column {
-    float: left;
+.authorinfo {
     padding: 10px;
 }
 
-/* 中间列 */
-.column.middle {
-    width: 100%;
+.videoimage {
+    vertical-align: top;
+    display: inline-block;
 }
 
-/* 清除列之后的浮动 */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.info {
+    display: inline-block;
 }
 
-/* 响应式布局 - 创建堆叠而非并排的三列 */
-@media screen and (max-width: 600px) {
-
-    .column.side,
-    .column.middle {
-        width: 100%;
-    }
+.ti {
+    font-size: x-large;
+    color: black;
 }
 
-/* 设置页脚的样式 */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
+.authorname {
+    color: rebeccapurple;
+    font-size: x-large;
+}
+
+.videobox {
+    /* border-color: black;
+    border-radius: 1px;
+    border-style: dotted; */
+    border-top: 2px outset;
+    /* border-style:outset; */
+    padding: 15px;
 }
