@@ -49,10 +49,6 @@ a.select {
   color: rebeccapurple;
 }
 
-.videolist {
-  /* 去掉<ul>每一项前面的点 */
-  list-style-type: none;
-}
 /* 视频卡片 */
 .video-card {
   /* 解决span不一样高 */
@@ -69,7 +65,7 @@ a.select {
   margin: 5px;
 }
 
-img.videoimage {
+.video-image {
   display: inline-block;
   width: 100%;
   max-height: 188px;
@@ -102,12 +98,8 @@ a.videolink:hover {
 }
 
 /* up卡片 */
-.authorlist {
-  /* 去掉<ul>每一项前面的点 */
-  list-style-type: none;
-}
 
-li.author {
+.author-card {
   float: left;
   width: 270px;
   height: 100px;
@@ -119,7 +111,7 @@ li.author {
   margin: 5px;
 }
 
-img.authorimage {
+.author-image {
   display: inline-block;
   width: 100px;
   height: 100px;
