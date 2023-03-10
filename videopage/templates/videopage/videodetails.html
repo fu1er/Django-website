@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>{{video.video_name}}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://localhost:8000/static/style/basicstyle.css/"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://localhost:8000/static/style/videodetails.css/"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>{{video.video_name}}</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/style/videodetails.css/">
-</head>
-
-<body>
-  {% load static %}
-  <div class="header">
-    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
-  </div>
-  <div class="topnav">
-    <a href="./">返回</a>
-  </div>
-
-  <div class="row" style="margin-right: auto;margin-left: auto;">
-
-
-    <div class="column middle">
-      <h2>{{video.video_name}}</h2>
-      <p>{{video.video_view}}&nbsp;&nbsp;{{video.publish_date}}</p>
-      <hr />
-      <a href="{{video.url}}">
-        <img src="{% static video.cover %}" alt="{{video.name}}" width=600px height=400px, style="margin-left: 90px;">
-      </a>
-      <hr />
-      <div style="text-align: center;">
-        <span style="padding: 40px;">点赞数{{video.likes}}</span>
-        <span style="padding: 40px;">投币数{{video.coins}}</span>
-        <span style="padding: 40px;">收藏数{{video.collects}}</span>
-      </div>
-      <hr />
-      <div>
-        <p>简介：{{video.brief}}</p>
-      </div>
+  <body>
+    {% load static %}
+    <div class="header">
+      <h1 class="title">CiliCili</h1>
     </div>
+    <div class="topnav"></div>
 
-    <div class="column side">
-      <div class="upinfo" , style="background-color: rebeccapurple">
-        <a href="{% url 'videopage:adetails' video.author.id %}" target="_blank" style="text-decoration:none;">
-          <img src="{% static video.author.photo %}" width=100px height=100px style="vertical-align: top;">
-          <span style="color: #ddd; font-size: x-large;">{{video.author.name}}</span>
+    <div class="area">
+      <div class="video-detail">
+        <h2>{{video.video_name}}</h2>
+        <p class="time">
+          {{video.video_view}}&nbsp;&nbsp;{{video.publish_date}}
+        </p>
+
+        <a href="{{video.url}}">
+          <img
+            class="video-cover"
+            src="{% static video.cover %}"
+            alt="{{video.name}}"
+            width="800px"
+          />
         </a>
+
+        <div class="video-data">
+          <span>点赞数 {{video.likes}}</span>
+          <span>投币数 {{video.coins}}</span>
+          <span>收藏数 {{video.collects}}</span>
+        </div>
+
+        <div class="video-brief">
+          <p>简介：{{video.brief}}</p>
+        </div>
       </div>
-      <h2>评论</h2>
-      <hr />
-      {% for com in com_list %}
-      <p>{{com}}</p>
-      <hr />
-      {% endfor %}
+
+      <div class="right-area">
+        <div class="upinfo" , style="background-color: rgb(102, 51, 153)">
+          <a
+            href="{% url 'videopage:adetails' video.author.id %}"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="{% static video.author.photo %}"
+              width="100px"
+              height="100px"
+              style="vertical-align: top"
+            />
+            <span style="color: #ddd; font-size: x-large"
+              >{{video.author.name}}</span
+            >
+          </a>
+        </div>
+        <h2>评论</h2>
+        <hr />
+        {% for com in com_list %}
+        <span class="comment">{{com}}</span>
+        <hr />
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <p></p>
-
-  </div>
-
-</body>
-
+    <div class="footer">
+      <p></p>
+    </div>
+  </body>
 </html>
