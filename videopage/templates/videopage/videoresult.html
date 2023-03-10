@@ -33,7 +33,7 @@
     <h1>共{{paginator.count}}个结果</h1>
     <p>用时{{time_used}}s</p>
     {% load static %} {% if page_obj %}
-    <div>
+    <div class="list-box">
       {% for video in page_obj %}
       <span class="video-card">
         <a
