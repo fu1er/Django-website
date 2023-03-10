@@ -7,7 +7,22 @@
     <link
       rel="stylesheet"
       type="text/css"
+      href="../../../static/style/basicstyle.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
       href="../../../static/style/authordetails.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -16,15 +31,13 @@
     <div class="header">
       <h1 class="title">CiliCili</h1>
     </div>
-    <div class="topnav">
-      <a href="../">返回</a>
-    </div>
+    <div class="topnav"></div>
 
     <div>
       <div class="authorinfo">
         <img
           src="{% static author.photo %}"
-          class="videoimage"
+          class="detail-image"
           width="100px"
           height="100px"
         />
@@ -36,7 +49,7 @@
       <div class="videobox">
         <a
           href="{% url 'videopage:avideo' author.id video.id %}"
-          style="text-decoration: none"
+          class="videolink"
         >
           <img
             src="{% static video.cover %}"
@@ -48,9 +61,11 @@
 
           <span class="info">
             <div class="ti">{{video.video_name}}</div>
-            <span>点赞数{{video.likes}}</span>
-            <span>投币数{{video.coins}}</span>
-            <span>收藏数{{video.collects}}</span>
+            <div class="de">
+              <span>点赞数{{video.likes}}</span>
+              <span>投币数{{video.coins}}</span>
+              <span>收藏数{{video.collects}}</span>
+            </div>
           </span>
         </a>
       </div>
