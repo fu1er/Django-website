@@ -34,27 +34,22 @@
 
     {% load static %} {% if page_obj %}
     <div class="list-box">
-      <ul class="videolist">
-        {% for video in page_obj %}
-        <li class="video">
-          <a
-            href="{% url 'videopage:hvideo' video.id %}"
-            target="_blank"
-            class="videolink"
-          >
-            <img
-              src="{% static video.cover %}"
-              alt="{{video.video_name}}"
-              class="videoimage"
-            />
-            <span class="video-name">{{video.video_name}}</span>
-          </a>
-        </li>
-
-        {% endfor %}
-        <!-- 自适应高度 -->
-        <div style="clear: both"></div>
-      </ul>
+      {% for video in page_obj %}
+      <span class="video-card">
+        <a
+          href="{% url 'videopage:hvideo' video.id %}"
+          target="_blank"
+          class="videolink"
+        >
+          <img
+            src="{% static video.cover %}"
+            alt="{{video.video_name}}"
+            class="videoimage"
+          />
+          <span class="video-name">{{video.video_name}}</span>
+        </a></span
+      >
+      {% endfor %}
     </div>
     {% endif %} {% if is_paginated %}
     <div class="box">
