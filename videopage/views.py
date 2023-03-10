@@ -87,7 +87,7 @@ def search_result(request):
         if result:
             md_r = "md="+md
             word_r = "info="+word
-            paginator = Paginator(result, 40)
+            paginator = Paginator(result, 60)
             page = request.GET.get('page', 1)
             try:  
                 page = int(page)
@@ -113,7 +113,7 @@ def search_result(request):
         if result:
             md_r = "md="+md
             word_r = "info="+word
-            paginator = Paginator(result, 40)
+            paginator = Paginator(result, 60)
             page = request.GET.get('page', 1)
             try:  
                 page = int(page)
