@@ -8,7 +8,8 @@
 }
 
 .info {
-    all: initial;
+    /* all: initial; */
+    text-align: initial;
     display: inline-block;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .de {
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .authorname {
