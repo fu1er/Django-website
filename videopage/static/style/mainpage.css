@@ -1,6 +1,7 @@
 /* 设置页眉的样式 */
 body {
   margin: 0;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .header {
@@ -10,7 +11,8 @@ body {
 }
 
 .title {
-  font-family: cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
   color: rebeccapurple;
 }
 
@@ -51,7 +53,7 @@ li.video {
   width: 300px;
   height: 270px;
   padding: 15px;
-  border-style:solid;
+  border-style: solid;
   border-width: 10px;
   border-radius: 15px;
   border-color: #f3f3f3;
@@ -66,8 +68,15 @@ img.videoimage {
 }
 
 span.brief {
+  /* display: inline-block; */
   width: 300px;
-  height: 200px;
+  height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .box {
@@ -104,6 +113,7 @@ span.brief {
 .search {
   margin: 3px;
 }
+
 a.videolink:link,
 a.videolink:visited {
   color: rebeccapurple;

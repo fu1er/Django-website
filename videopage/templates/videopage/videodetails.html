@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>{{video.id}}</title>
+  <title>{{video.video_name}}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/style/videodetails.css/">
@@ -14,7 +14,7 @@
     <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
   </div>
   <div class="topnav">
-    <a href="../">返回</a>
+    <a href="./">返回</a>
   </div>
 
   <div class="row" style="margin-right: auto;margin-left: auto;">
@@ -41,7 +41,7 @@
 
     <div class="column side">
       <div class="upinfo" , style="background-color: rebeccapurple">
-        <a href="{% url 'videopage:adetails' video.author.id %}" style="text-decoration:none;">
+        <a href="{% url 'videopage:adetails' video.author.id %}" target="_blank" style="text-decoration:none;">
           <img src="{% static video.author.photo %}" width=100px height=100px style="vertical-align: top;">
           <span style="color: #ddd; font-size: x-large;">{{video.author.name}}</span>
         </a>

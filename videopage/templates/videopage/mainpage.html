@@ -9,6 +9,16 @@
       type="text/css"
       href="../../static/style/mainpage.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -27,7 +37,11 @@
       <ul class="videolist">
         {% for video in page_obj %}
         <li class="video">
-          <a href="{% url 'videopage:hvideo' video.id %}" class="videolink">
+          <a
+            href="{% url 'videopage:hvideo' video.id %}"
+            target="_blank"
+            class="videolink"
+          >
             <img
               src="{% static video.cover %}"
               alt="{{video.video_name}}"
@@ -52,17 +66,13 @@
         <a href="?page={{ page_obj.previous_page_number }}">«</a>
         {% else %}
         <!-- <span></span> -->
-        {% endif %} 
-        {% for i in page_range %} 
-        {% if page_obj.number == i %}
+        {% endif %} {% for i in page_range %} {% if page_obj.number == i %}
         <a class="active">{{i}}</a>
         {% elif i == '…' %}
         <a>{{i}}</a>
         {% else %}
         <a href="?page={{i}}">{{i}}</a>
-        {% endif %} 
-        {% endfor %} 
-        {% if page_obj.has_next %}
+        {% endif %} {% endfor %} {% if page_obj.has_next %}
         <a href="?page={{page_obj.next_page_number}}">»</a>
         {% else %}
         <!-- <span></span> -->
