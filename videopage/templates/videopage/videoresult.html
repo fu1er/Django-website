@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Welcome!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/style/basicstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Welcome!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../../static/style/mainpage.css">
-</head>
+  <body>
+    <div class="header">
+      <h1 class="title">CiliCili</h1>
+    </div>
 
-<body>
-
-  <div class="header">
+    <div class="topnav">
+      <a href="#" class="select">搜索结果</a>
+      <a href="../">返回</a>
+    </div>
     <h1>共{{paginator.count}}个结果</h1>
     <p>用时{{time_used}}s</p>
-  </div>
-
-  <div class="topnav">
-    <a href="../../">视频</a>
-    <a href="../../authors/">作者</a>
-    <a href="#" style="background-color: lightgray; color: rebeccapurple;">搜索结果</a>
-    <a href="../">返回</a>
-  </div>
-
-  {% load static %}
-  {% if page_obj %}
-  <main>
-    <div style="width: 1320px; margin-right:auto;margin-left:auto ">
-      <ul class="row" style="list-style-type: none;">
+    {% load static %} {% if page_obj %}
+    <div>
+      <ul class="videolist">
         {% for video in page_obj %}
-        <a href="{% url 'videopage:details' video.id %}" class='videolink'>
-          <li class="column" style="border-style: ridge; border-radius: 20px; margin: 5px; border-color: #ddd;">
-            <img src="{% static video.cover %}" alt="{{video.video_name}}" width=270px height=180px
-              style="margin: 2px;">
-            <div>
-              <span style="width:300px; height:200px;">{{video.video_name}}</span>
-            </div>
-          </li>
-        </a>
+        <li class="video">
+          <a
+            href="{% url 'videopage:hvideo' video.id %}"
+            target="_blank"
+            class="videolink"
+          >
+            <img
+              src="{% static video.cover %}"
+              alt="{{video.video_name}}"
+              class="videoimage"
+            />
+            <span class="video-name">{{video.video_name}}</span>
+          </a>
+        </li>
+
         {% endfor %}
+        <!-- 自适应高度 -->
+        <div style="clear: both"></div>
       </ul>
     </div>
-  </main>
-  {% endif %}
-
-  {% if is_paginated %}
-  <div style="text-align: center;">
-
-    <div class="pagination">
+    {% endif %} {% if is_paginated %}
+    <div style="text-align: center">
       <div class="pagination">
-        <span style="font-size:small; float: left; padding: 7px;">共{{paginator.count}}条数据</span>
-        {% if page_obj.has_previous %}
-        <a href="?{{md_r}}&{{word_r}}&page={{ page_obj.previous_page_number }}">«</a>
-        {% else %}
-        <span></span>
-        {% endif %}
-
-        {% for i in page_range %}
-        {% if page_obj.number == i %}
-        <a class="active">{{i}}</a>
-        {% elif i == '…' %}
-        <a>{{i}}</a>
-        {% else %}
-        <a href="?{{md_r}}&{{word_r}}&page={{i}}">{{i}}</a>
-        {% endif %}
-        {% endfor %}
-
-        {% if page_obj.has_next %}
-        <a href="?{{md_r}}&{{word_r}}&page={{page_obj.next_page_number}}">»</a>
-        {% else %}
-        <span></span>
-        {% endif %}
+        <div class="pagination">
+          <span style="font-size: small; float: left; padding: 7px"
+            >共{{paginator.count}}条数据</span
+          >
+          {% if page_obj.has_previous %}
+          <a
+            href="?{{md_r}}&{{word_r}}&page={{ page_obj.previous_page_number }}"
+            >«</a
+          >
+          {% else %}
+          <span></span>
+          {% endif %} {% for i in page_range %} {% if page_obj.number == i %}
+          <a class="active">{{i}}</a>
+          {% elif i == '…' %}
+          <a>{{i}}</a>
+          {% else %}
+          <a href="?{{md_r}}&{{word_r}}&page={{i}}">{{i}}</a>
+          {% endif %} {% endfor %} {% if page_obj.has_next %}
+          <a href="?{{md_r}}&{{word_r}}&page={{page_obj.next_page_number}}"
+            >»</a
+          >
+          {% else %}
+          <span></span>
+          {% endif %}
+        </div>
       </div>
     </div>
-
-
-  </div>
-  {% endif %}
-  <div style="margin: 300px;"></div>
-</body>
-
+    {% endif %}
+    <div style="margin: 300px"></div>
+  </body>
 </html>
