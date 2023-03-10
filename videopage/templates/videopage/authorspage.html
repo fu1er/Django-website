@@ -33,27 +33,25 @@
     </div>
 
     {% load static %} {% if page_obj %}
-    <main>
-      <div class="list-box">
-        {% for author in page_obj %}
-        <span class="author-card">
-          <a
-            href="{% url 'videopage:adetails' author.id %}"
-            class="authorlink"
-            target="_blank"
-          >
-            <img
-              class="author-image"
-              src="{% static author.photo %}"
-              alt="{{author.name}}"
-              style="vertical-align: top"
-            />
-            {{author.name}}
-          </a>
-        </span>
-        {% endfor %}
-      </div>
-    </main>
+    <div class="list-box">
+      {% for author in page_obj %}
+      <span class="author-card">
+        <a
+          href="{% url 'videopage:adetails' author.id %}"
+          class="authorlink"
+          target="_blank"
+        >
+          <img
+            class="author-image"
+            src="{% static author.photo %}"
+            alt="{{author.name}}"
+            style="vertical-align: top"
+          />
+          {{author.name}}
+        </a>
+      </span>
+      {% endfor %}
+    </div>
     {% endif %} {% if is_paginated %}
     <div class="box">
       <div class="pagination">
