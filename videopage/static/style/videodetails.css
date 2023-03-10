@@ -1,5 +1,6 @@
 
-.header .topnav{
+.header,
+.topnav{
   min-width: 800px;
 }
 
