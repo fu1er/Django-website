@@ -47,7 +47,7 @@ a.select {
   /* 去掉<ul>每一项前面的点 */
   list-style-type: none;
 }
-
+/* 视频卡片 */
 li.video {
   float: left;
   width: 300px;
@@ -67,7 +67,7 @@ img.videoimage {
   margin: 2px;
 }
 
-span.brief {
+span.video-name {
   /* display: inline-block; */
   width: 300px;
   height: 70px;
@@ -79,6 +79,61 @@ span.brief {
   -webkit-line-clamp: 3;
 }
 
+a.videolink:link,
+a.videolink:visited {
+  color: rebeccapurple;
+  text-decoration: none;
+  text-align: center;
+  /* display: inline-block; */
+}
+
+a.videolink:hover {
+  color: rebeccapurple;
+}
+
+/* up卡片 */
+.authorlist {
+  /* 去掉<ul>每一项前面的点 */
+  list-style-type: none;
+}
+
+li.author {
+  float: left;
+  width: 270px;
+  height: 100px;
+  padding: 15px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 15px;
+  border-color: #f5f5f5;
+  margin: 5px;
+}
+
+img.authorimage {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+}
+
+span.authorname {
+  display: inline;
+}
+
+a.authorlink:link,
+a.authorlink:visited {
+    color: rebeccapurple;
+    text-decoration: none;
+    text-align: center;
+    /* display: inline-block; */
+}
+
+a.authorlink:hover {
+    color: rebeccapurple;
+}
+
+
+/* 包裹分页选择器 */
 .box {
   display: block;
   text-align: center;
@@ -110,18 +165,7 @@ span.brief {
   background-color: #ddd;
 }
 
-.search {
+.jump {
   margin: 3px;
 }
 
-a.videolink:link,
-a.videolink:visited {
-  color: rebeccapurple;
-  text-decoration: none;
-  text-align: center;
-  /* display: inline-block; */
-}
-
-a.videolink:hover {
-  color: rebeccapurple;
-}

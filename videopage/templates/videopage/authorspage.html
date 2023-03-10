@@ -7,7 +7,17 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../static/style/authorspage.css"
+      href="../../static/style/basicstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -33,13 +43,13 @@
               class="authorlink"
             >
               <img
+                class="authorimage"
                 src="{% static author.photo %}"
                 alt="{{author.name}}"
-                class="authorimage"
-                style="vertical-align: top;"
+                style="vertical-align: top"
               />
               <!-- <span class="authorname"> -->
-                {{author.name}}
+              {{author.name}}
               <!-- </span> -->
             </a>
           </li>
@@ -72,7 +82,7 @@
         {% endif %}
         <div class="pagination">
           <form style="padding: 5px">
-            跳至<input class="search" type="text" name="page" size="1" />页
+            跳至<input class="jump" type="text" name="page" size="1" />页
           </form>
         </div>
       </div>

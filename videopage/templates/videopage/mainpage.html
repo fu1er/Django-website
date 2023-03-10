@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../static/style/mainpage.css"
+      href="../../static/style/basicstyle.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,7 @@
               alt="{{video.video_name}}"
               class="videoimage"
             />
-            <span class="brief">{{video.video_name}}</span>
+            <span class="video-name">{{video.video_name}}</span>
           </a>
         </li>
 
@@ -79,7 +79,7 @@
         {% endif %}
         <div class="pagination">
           <form style="padding: 5px">
-            跳至<input class="search" type="text" name="page" size="1" />页
+            跳至<input class="jump" type="text" name="page" size="1" />页
           </form>
         </div>
       </div>
