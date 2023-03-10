@@ -7,8 +7,8 @@
 
 .area {
   width: 800px;
-  margin: 15px;
-  display: inline-block;
+  margin: auto;
+  /* display: inline-block; */
 }
 
 .time {
@@ -19,15 +19,9 @@
   width:800px;
 }
 
-.video-cover {}
-
 .video-data {
   margin-top: 5px;
   margin-right: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid black;
-}
-
-.comment {
-  
 }
