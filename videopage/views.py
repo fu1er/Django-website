@@ -10,7 +10,7 @@ def mainpage(request):
     videos = Videoinfo.objects.only(
         'video_name', 'cover'
     )
-    paginator = Paginator(videos, 40)
+    paginator = Paginator(videos, 60)
     page = request.GET.get('page', 1)
     try:  
         page = int(page)
@@ -49,7 +49,7 @@ def authorpage(request):
     authors = Author.objects.only(
         'name', 'photo'
     )
-    paginator = Paginator(authors, 40)
+    paginator = Paginator(authors, 60)
     page = request.GET.get('page', 1)
     try:  
         page = int(page)
