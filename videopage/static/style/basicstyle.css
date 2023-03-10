@@ -33,6 +33,11 @@ body {
   text-decoration: none;
 }
 
+.list-box {
+  width: 99vw;
+  padding: auto;
+}
+
 a.select {
   background-color: lightgray;
   color: rebeccapurple;
