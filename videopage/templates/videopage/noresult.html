@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>cilicili</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/style/basicstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>cilicili</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../../static/style/mainpage.css">
-</head>
-
-<body>
-
-  <div class="header">
-    <h1 style="font-family:cursive;color:rebeccapurple">CiliCili</h1>
-  </div>
-
-  <div class="topnav">
-    <a href="../../">视频</a>
-    <a href="../../authors/">作者</a>
-    <a href="../" style="background-color: lightgray; color: rebeccapurple;">返回</a>
-  </div>
-
-  {% load static %}
-  <main>
-    <div class="search" style="margin-right:auto; margin-left:auto; margin-top: 300px;">
-      <p style="text-align: center; color:rebeccapurple">没有找到你想要的结果</p>
+  <body>
+    <div class="header">
+      <h1 style="font-family: cursive; color: rebeccapurple">CiliCili</h1>
     </div>
-  </main>
-  <div style="margin: 300px;"></div>
-</body>
 
+    <div class="topnav">
+      <a href="../../">视频</a>
+      <a href="../../authors/">作者</a>
+      <a href="../">返回</a>
+    </div>
+
+    {% load static %}
+    <div>
+      <p style="text-align: center; color: rebeccapurple">
+        没有找到你想要的结果
+      </p>
+    </div>
+    <div style="margin: 300px"></div>
+  </body>
 </html>
