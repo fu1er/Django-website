@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Welcome!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/style/basicstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Welcome!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../../static/style/searchpage.css">
-  </style>
-</head>
-
-<body>
-
-  <div class="header">
-    <h1 class="title">CiliCili</h1>
-  </div>
-
-  <div class="topnav">
-    <a href="../home/">视频</a>
-    <a href="../authors/">作者</a>
-    <a href="#" class="select">搜索</a>
-  </div>
-
-  {% load static %}
-  {% csrf_token %}
-  <main>
-    <span class="space"> </span>
-    <div class="search">
-      <form action="{% url 'videopage:result' %}">
-        <select class="left" name="md">
-          <option value="video">视频</option>
-          <option value="author">作者</option>
-        </select>
-        <input class="keys" type="text" name="info" size="50">
-        <input class="button" type="submit" value="搜索">
-      </form>
-      <div style="clear: both"></div>
+  <body>
+    <div class="header">
+      <h1 class="title">CiliCili</h1>
     </div>
-    <span class="space"> </span>
-  </main>
-  <div style="margin: 300px;"></div>
-</body>
 
+    <div class="topnav">
+      <a href="../home/">视频</a>
+      <a href="../authors/">作者</a>
+      <a href="#" class="select">搜索</a>
+    </div>
+
+    {% load static %} {% csrf_token %}
+    <main>
+      <span class="space"> </span>
+      <div class="search-form">
+        <form action="{% url 'videopage:result' %}">
+          <select class="left" name="md">
+            <option value="video">视频</option>
+            <option value="author">作者</option>
+          </select>
+          <input class="keys" type="text" name="info" size="50" />
+          <input class="button" type="submit" value="搜索" />
+        </form>
+        <div style="clear: both"></div>
+      </div>
+      <span class="space"> </span>
+    </main>
+    <div style="margin: 300px"></div>
+  </body>
 </html>

@@ -1,9 +1,9 @@
-/* 设置页眉的样式 */
 body {
   margin: 0;
   font-family: 'Noto Serif SC', serif;
 }
 
+/* 设置页眉的样式 */
 .header {
   background-color: #f1f1f1;
   padding: 20px;
@@ -18,6 +18,7 @@ body {
 
 /* 设置顶部导航栏的样式 */
 .topnav {
+  height: 50px;
   overflow: hidden;
   background-color: rebeccapurple;
 }
@@ -169,3 +170,51 @@ a.authorlink:hover {
   margin: 3px;
 }
 
+/* 搜索栏 */
+span.space {
+  display: inline-flex;
+  margin: 100px 25%;
+}
+
+.search-form {
+  display: inline-flex;
+  margin: 100px 25%;
+}
+
+.search-form button:hover {
+  font-size: 16px;
+}
+
+select.left {
+  display: inline;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  /* appearance: none; */
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  padding-left: 9px;
+  color: rebeccapurple;
+  float: left;
+  border: 1px solid rgba(137, 44, 212, 0.884);
+}
+
+input.keys {
+  display: inline-block;
+  height: 36px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  border: 1px solid rgba(137, 44, 212, 0.884);
+}
+
+input.button {
+  display: inline-block;
+  height: 40px;
+  width: 55px;
+  background-color: rebeccapurple;
+  color: #ddd;
+  margin-left: 5px;
+  font-size: medium;
+  border: 1px solid rgba(137, 44, 212, 0.884);
+}
