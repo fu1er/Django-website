@@ -196,15 +196,15 @@ span.space {
   /* width: 650px; */
   display: flex;
   justify-content: center;
-  margin: 150px auto;
+  margin-top: 150px;
 }
 
-.search-form form {
-  flex:0 630px;
-  min-width: 250px;
+/* .the-form { */
+  /* flex:0; */
+  /* min-width: 250px; */
   /* display: inline-block; */
   /* width: 650px; */
-}
+/* } */
 
 input,
 select {
