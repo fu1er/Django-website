@@ -128,14 +128,14 @@ span.authorname {
 
 a.authorlink:link,
 a.authorlink:visited {
-    color: rebeccapurple;
-    text-decoration: none;
-    text-align: center;
-    /* display: inline-block; */
+  color: rebeccapurple;
+  text-decoration: none;
+  text-align: center;
+  /* display: inline-block; */
 }
 
 a.authorlink:hover {
-    color: rebeccapurple;
+  color: rebeccapurple;
 }
 
 
@@ -186,17 +186,25 @@ span.space {
   width: 650px;
   margin: 150px auto;
 }
+
 .search-form form {
   display: inline-block;
   width: 650px;
 }
-.search-form button:hover {
-  font-size: 16px;
+
+input,
+select {
+  -webkit-box-sizing: border-box;
+  /* For legacy WebKit based browsers */
+  -moz-box-sizing: border-box;
+  /* For legacy (Firefox <29) Gecko based browsers */
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
 }
 
 select.left {
   display: inline;
-  width: 60px;
   height: 40px;
   line-height: 40px;
   /* appearance: none; */
@@ -208,11 +216,17 @@ select.left {
   border: 1px solid rgba(137, 44, 212, 0.884);
 }
 
+input:focus {
+  background: rgba(0, 0, 0, .05);
+  border-radius: 5px;
+  outline: none;
+}
+
 input.keys {
   display: inline-block;
   max-width: 500px;
   width: 50vw;
-  height: 36px;
+  height: 40px;
   margin-left: 5px;
   margin-right: 5px;
   padding-left: 10px;
@@ -225,7 +239,12 @@ input.button {
   width: 55px;
   background-color: rebeccapurple;
   color: #ddd;
-  margin-left: 5px;
+  margin-left: 3px;
   font-size: medium;
   border: 1px solid rgba(137, 44, 212, 0.884);
+}
+
+input.button:hover {
+  color: rebeccapurple;
+  background-color: rgba(0, 0, 0, .05);
 }
