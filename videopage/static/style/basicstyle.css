@@ -215,6 +215,11 @@ select {
   font-size: 100%;
 }
 
+select:hover {
+  color: rebeccapurple;
+  background-color: rgba(0, 0, 0, .05);
+}
+
 select.left {
   display: inline;
   height: 40px;
