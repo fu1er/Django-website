@@ -242,7 +242,7 @@ input.button {
   width: 55px;
   background-color: rebeccapurple;
   color: #ddd;
-  margin-left: 3px;
+  /* margin-left: 3px; */
   font-size: medium;
   border: 1px solid rgba(137, 44, 212, 0.884);
 }
