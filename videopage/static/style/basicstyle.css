@@ -39,7 +39,11 @@ body {
 
 .list-box {
   /* transform: translate(-50%,-50%); */
-  margin-top: 15px;
+  margin-top: 30px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 a.select {
@@ -55,18 +59,24 @@ a.select {
 
 /* 视频卡片 */
 .video-card {
+  max-width: 300px;
+  flex:300px;
   /* 解决span不一样高 */
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* --------------- */
-  display: inline-block;
-  width: 300px;
-  height: 270px;
+  
+  /* width: 300px; */
+  /* height: 270px; */
   padding: 15px;
+  margin: 5px;
+  display:inline-block;
+  display:inline-block;
+
   border-style: solid;
   border-width: 10px;
   border-radius: 15px;
   border-color: #f3f3f3;
-  margin: 5px;
+  
 }
 
 .video-image {
