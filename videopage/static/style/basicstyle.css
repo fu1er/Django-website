@@ -70,7 +70,6 @@ a.select {
   padding: 15px;
   margin: 5px;
   display:inline-block;
-  display:inline-block;
 
   border-style: solid;
   border-width: 10px;
@@ -188,18 +187,23 @@ a.authorlink:hover {
 /* 搜索栏 */
 
 span.space {
-  display: inline-flex;
-  margin: 100px 25%;
+  /* display: inline-flex; */
+  flex:1;
+  /* margin: 100px 25%; */
 }
 
 .search-form {
-  width: 650px;
+  /* width: 650px; */
+  display: flex;
+  justify-content: center;
   margin: 150px auto;
 }
 
 .search-form form {
-  display: inline-block;
-  width: 650px;
+  flex:0 630px;
+  min-width: 250px;
+  /* display: inline-block; */
+  /* width: 650px; */
 }
 
 input,
