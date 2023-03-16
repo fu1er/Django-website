@@ -198,6 +198,8 @@ select {
   /* For legacy WebKit based browsers */
   -moz-box-sizing: border-box;
   /* For legacy (Firefox <29) Gecko based browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 100%;
@@ -211,6 +213,7 @@ select.left {
   /* -webkit-appearance: none;
   -moz-appearance: none; */
   padding-left: 9px;
+  padding-right: 9px;
   color: rebeccapurple;
   float: left;
   border: 1px solid rgba(137, 44, 212, 0.884);
